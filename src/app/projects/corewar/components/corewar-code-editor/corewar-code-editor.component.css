@@ -1,0 +1,46 @@
+:host {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ace-editor {
+    border: 2px solid #f8f9fa;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    width: 35vw;
+    height: 60vh;
+}
+
+.lock-loading {
+    pointer-events: none;
+}
+
+.command-doc {
+    margin: 20px;
+    border: 2px solid red;
+    width: 500vh;
+    height: 500px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    font-size: 10px;
+}
+
+.editor-container {
+    /*display: flex;*/
+
+    /*justify-items: center;*/
+    /*align-items: center;*/
+}
+
+.buttons-container {
+margin: 10px;
+
+    & button {
+        margin: 5px;
+    }
+}
+
+.pseudo-asm-header {
+    margin-bottom: 20px;
+}

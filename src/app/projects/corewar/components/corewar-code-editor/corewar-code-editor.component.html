@@ -1,0 +1,17 @@
+<div class="pseudo-asm-header">Make powerful champion (:</div>
+<div class="editor-container">
+    <div class="ace-editor" [class.lock-loading]="compileChampion | async" #editor></div>
+    <mat-progress-bar *ngIf="compileChampion | async" mode="query"></mat-progress-bar>
+</div>
+<div class="buttons-container">
+    <button mat-raised-button
+            color="primary"
+            [disabled]="Boolean(compileChampion | async)"
+            (click)="compileAndSaveChampion()"
+    >save champion</button>
+    <button mat-raised-button color="primary" (click)="clearEditor()">clear</button>
+    <button mat-raised-button
+            color="primary"
+            (click)="openInstructionsInfo()"
+    >about instructions</button>
+</div>

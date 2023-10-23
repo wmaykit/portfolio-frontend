@@ -1,0 +1,13 @@
+:host {
+    padding: 10px;
+    display: flex;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5px;
+    padding: 5px;
+    border: 2px solid black
+}

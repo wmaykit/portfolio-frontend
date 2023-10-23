@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    margin-top: auto;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.toggle-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

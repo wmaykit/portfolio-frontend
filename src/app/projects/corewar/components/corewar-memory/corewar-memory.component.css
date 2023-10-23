@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+    font-family: SansSerif  , serif;
+    font-weight: bold;
+    font-size: 0.7vw;
+    line-height: 0.6vh;
+    background: gray;
+    color: white;
+    /*font-stretch: expanded;*/
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+td {
+    width: 0.1vw;
+}

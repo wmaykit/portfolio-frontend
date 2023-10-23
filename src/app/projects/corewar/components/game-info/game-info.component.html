@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <span>Cycle: {{cycle}}</span>
+    </div>
+    <div>
+        <span>Processes: {{processes}}</span>
+    </div>
+    <div>
+        <span>CYCLE_TO_DIE : {{cycleToDie}}</span>
+    </div>
+    <div>
+        <span>CYCLE_DELTA : {{cycleDelta}}</span>
+    </div>
+    <div>
+        <span>NBR_LIVE : {{nbrLive}}</span>
+    </div>
+    <div>
+        <span>MAX_CHECKS : {{maxChecks}}</span>
+    </div>
+    <br>
+    <div>
+        <button mat-raised-button color="warn" (click)="openEditor()" >add champion</button>
+        <div *ngFor="let player of players; let i = index">
+            <span>Player {{i + 1}}</span>
+            <br>
+            <span>{{player.name}}</span>
+        </div>
+    </div>
+    <div *ngIf="winnerChampion">
+        win - {{winnerChampion.name}}
+    </div>
+</div>

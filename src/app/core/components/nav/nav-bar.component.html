@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <ng-container *ngIf="isSmall | async; else menuButtonsToggle" >
+        <span>Artyom Kabanyok</span>
+        <button mat-button [matMenuTriggerFor]="menu">Projects</button>
+        <mat-menu #menu="matMenu">
+            <a mat-menu-item routerLink="/push-swap">Push swap</a>
+            <a mat-menu-item routerLink="/corewar">Corewar</a>
+        </mat-menu>
+    </ng-container>
+    <span class="example-spacer"></span>
+    <button mat-icon-button routerLink=""><mat-icon>home</mat-icon></button>
+</mat-toolbar>
+
+<ng-template #menuButtonsToggle>
+    <button mat-icon-button (click)="toggle.emit(undefined)"><mat-icon>menu</mat-icon></button>
+</ng-template>

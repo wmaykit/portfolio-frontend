@@ -1,0 +1,12 @@
+<app-nav (toggle)="drawer.toggle($event)"></app-nav>
+<mat-drawer-container style="height: 100%">
+<mat-drawer #drawer>
+        <div class="toggle-panel">
+            <a mat-button routerLink="/push-swap">Push swap</a>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content class="content">
+        <router-outlet></router-outlet>
+        <app-footer class="footer"></app-footer>
+    </mat-drawer-content>
+</mat-drawer-container>

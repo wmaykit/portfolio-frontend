@@ -1,0 +1,29 @@
+<div class="header-container">
+    <div>
+        <div>
+            <button mat-stroked-button (click)="pushToA()"> Push to A </button>
+            <button mat-stroked-button (click)="stackA?.reverseRotate()"> reverse rotate A </button>
+            <button mat-stroked-button (click)="stackA?.rotate()"> rotate A </button>
+        </div>
+        <div>
+            <button mat-stroked-button (click)="pushToB()"> Push to B </button>
+            <button mat-stroked-button (click)="stackB?.reverseRotate()"> reverse rotate B </button>
+            <button mat-stroked-button (click)="stackB?.rotate()"> rotate B </button>
+        </div>
+        <div>
+            <button mat-stroked-button (click)="twoRotate()"> rotate together </button>
+            <button mat-stroked-button (click)="twoReverseRotate()"> reverse rotate together </button>
+        </div>
+        <div>
+            <button mat-stroked-button (click)="playAnimation()"> animation sequence </button>
+        </div>
+        <div>
+            <span>{{commands[currentIndex - 1]}} > {{commands[currentIndex]}} < {{commands[currentIndex + 1]}}</span>
+        </div>
+    </div>
+    <div>
+        <input #numbers (input)="updateStackA(numbers.value)">
+        <button mat-stroked-button (click)="solveInput(numbers.value)">SOLVE!</button>
+    </div>
+</div>
+<div #drawContainer></div>
