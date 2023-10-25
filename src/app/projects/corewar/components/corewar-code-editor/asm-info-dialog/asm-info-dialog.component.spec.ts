@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AsmInfoDialogComponent } from './asm-info-dialog.component';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('AsmInfoDialogComponent', () => {
   let component: AsmInfoDialogComponent;
@@ -8,7 +9,13 @@ describe('AsmInfoDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AsmInfoDialogComponent ]
+      declarations: [ AsmInfoDialogComponent ],
+      providers: [
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: {}
+        }
+      ]
     })
     .compileComponents();
 

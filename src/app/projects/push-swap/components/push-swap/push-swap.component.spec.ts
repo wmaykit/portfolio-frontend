@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PushSwapComponent } from './push-swap.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('PushSwapComponent', () => {
   let component: PushSwapComponent;
@@ -8,7 +9,8 @@ describe('PushSwapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PushSwapComponent ]
+      declarations: [ PushSwapComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
 
