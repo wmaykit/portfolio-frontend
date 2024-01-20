@@ -11,6 +11,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -33,7 +35,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatMenuModule,
     RouterModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDividerModule,
+    MatListModule
   ]
 })
 export class CoreModule { }
