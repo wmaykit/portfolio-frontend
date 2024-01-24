@@ -1,0 +1,20 @@
+:host {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about-text {
+    max-width: 600px;
+    margin-left: 20px;
+    font-family: Work Sans, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.25;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+}

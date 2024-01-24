@@ -1,8 +1,13 @@
 <app-nav (toggle)="drawer.toggle($event)"></app-nav>
 <mat-drawer-container style="height: 100%">
-<mat-drawer #drawer>
+    <mat-drawer #drawer>
         <div class="toggle-panel">
-            <a mat-button routerLink="/push-swap">Push swap</a>
+            <button mat-button routerLink="/about">About</button>
+            <button mat-button>Projects</button>
+            <button mat-button routerLink="/skills">Skills</button>
+            <button mat-button routerLink="/education">Education</button>
+            <button mat-button routerLink="/contacts">Contacts</button>
+            <a mat-button href="https://docs.google.com/document/d/170n3NCUs-Y5CYd8ptyAXdL_FtDFw2vAyx1RZgV7iCB4/edit?usp=sharing">Resume</a>
         </div>
     </mat-drawer>
     <mat-drawer-content class="content">

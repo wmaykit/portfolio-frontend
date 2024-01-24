@@ -12,6 +12,14 @@
 .toggle-panel {
     display: flex;
     flex-direction: column;
+
+    button {
+        margin: 10px;
+    }
+
+    a {
+        margin: 10px;
+    }
 }
 
 .content {
