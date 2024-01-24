@@ -1,5 +1,31 @@
-.example-spacer {
-    flex: 1 1 auto;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+mat-toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    margin-right: 10px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.buttons {
+    button {
+        margin: 5px;
+    }
+}
+
+.last-block {
+    width: 160px;
 }
 
 .mat-expansion-panel {

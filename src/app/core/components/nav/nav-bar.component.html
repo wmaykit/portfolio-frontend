@@ -1,16 +1,26 @@
 <mat-toolbar>
-    <ng-container *ngIf="isSmall | async; else menuButtonsToggle" >
-        <span>Artyom Kabanyok</span>
-        <button mat-button [matMenuTriggerFor]="menu">Projects</button>
-        <mat-menu #menu="matMenu">
-            <a mat-menu-item routerLink="/push-swap">Push swap</a>
-            <a mat-menu-item routerLink="/corewar">Corewar</a>
-        </mat-menu>
-    </ng-container>
-    <span class="example-spacer"></span>
-    <button mat-icon-button routerLink=""><mat-icon>home</mat-icon></button>
+    <div class="container">
+        <ng-container *ngIf="isSmall | async; else menuButtonsToggle">
+                <div class="logo">
+                    <a routerLink="">
+                       Artyom Kabanyok
+                    </a>
+                </div>
+            <div class="buttons">
+                <button mat-button routerLink="/about">About</button>
+                <button mat-button>Projects</button>
+                <button mat-button routerLink="/skills">Skills</button>
+                <button mat-button routerLink="/education">Education</button>
+                <button mat-button routerLink="/contacts">Contacts</button>
+                <a mat-button href="https://docs.google.com/document/d/170n3NCUs-Y5CYd8ptyAXdL_FtDFw2vAyx1RZgV7iCB4/edit?usp=sharing">Resume</a>
+            </div>
+        </ng-container>
+        <div class="last-block"></div>
+    </div>
 </mat-toolbar>
 
 <ng-template #menuButtonsToggle>
-    <button mat-icon-button (click)="toggle.emit(undefined)"><mat-icon>menu</mat-icon></button>
+    <button mat-icon-button (click)="toggle.emit(undefined)">
+        <mat-icon>menu</mat-icon>
+    </button>
 </ng-template>

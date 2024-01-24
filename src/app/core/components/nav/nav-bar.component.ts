@@ -12,7 +12,7 @@ export class NavBarComponent implements OnInit {
   isSmall: Observable<boolean>;
 
   constructor(breakpointObserver: BreakpointObserver) {
-    this.isSmall = breakpointObserver.observe(Breakpoints.XSmall).pipe(map((state) => !state.matches))
+    this.isSmall = breakpointObserver.observe(Breakpoints.Small).pipe(map((state) => !state.matches))
     this.isSmall.subscribe((isSmall) => isSmall && this.toggle.emit(false))
   }
 
