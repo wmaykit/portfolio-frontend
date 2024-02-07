@@ -1,0 +1,38 @@
+<div class="container">
+    <mat-grid-list [cols]="columns | async" rowHeight="200px" gutterSize="20px">
+        <mat-grid-tile
+                *ngFor="let project of projects">
+            <mat-card class="example-card">
+                <mat-card-title>{{ project.name }}</mat-card-title>
+                <mat-card-content>
+                    <p>{{ project.text }}</p>
+                    <mat-divider></mat-divider>
+                    <p class="language">Language:
+                        <span *ngFor="let language of project.languages; last as isLast"
+                        >{{ language }}<span *ngIf="!isLast">, </span></span>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button *ngIf="project.articleLink" [routerLink]="project.articleLink">article</button>
+                    <a *ngIf="containOneElement(project.sources) else buttonWithMenu"
+                       href="{{project.sources[0].url}}"
+                       mat-button>source<mat-icon svgIcon="external"></mat-icon></a>
+                    <a *ngIf="project.demoLink?.isExternal === true; else internalDemoLink"
+                       href="{{project.demoLink?.url}}"
+                       mat-button>demo</a>
+                    <ng-template #internalDemoLink>
+                        <a mat-button
+                           *ngIf="project.demoLink?.isExternal === false"
+                           [routerLink]="project.demoLink?.url">demo</a>
+                    </ng-template>
+                    <ng-template #buttonWithMenu>
+                        <button mat-button [matMenuTriggerFor]="menu">source</button>
+                        <mat-menu #menu="matMenu">
+                            <a *ngFor="let link of project.sources" mat-menu-item href="{{link.url}}">{{link.title}}</a>
+                        </mat-menu>
+                    </ng-template>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

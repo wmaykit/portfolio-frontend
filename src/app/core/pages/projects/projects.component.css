@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100%;
+    max-width: 1700px;
+
+    mat-card {
+        width: 100%;
+
+        .mat-card-actions .mat-button:first-child {
+            margin-right: 8px;
+        }
+    }
+}
+
+.mat-icon {
+    transform: scale(0.5);
+}
+
