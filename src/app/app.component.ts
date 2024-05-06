@@ -3,6 +3,7 @@ import { NavigationStart, Router } from '@angular/router';
 import { MatDrawer } from '@angular/material/sidenav';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { LinksEnum } from './core/enums/links.enum';
 
 @Component({
   selector: 'portfolio-root',
@@ -11,7 +12,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
   @ViewChild(MatDrawer) private readonly matDrawer: MatDrawer | undefined;
-  title = 'kabanyok-artyom';
+  readonly title = 'kabanyok-artyom';
+  readonly RESUME_URL = LinksEnum.CV;
 
   constructor(router: Router, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     router.events.subscribe((event) => {
