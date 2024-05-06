@@ -1,0 +1,6 @@
+<div class="container">
+    <div *ngFor="let skill of skills" class="skill-row">
+        <div>{{skill.name}}</div>
+        <rating [rating]="skill.level" ></rating>
+    </div>
+</div>
