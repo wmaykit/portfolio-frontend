@@ -19,6 +19,7 @@ export class FooterComponent implements OnInit {
     iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
     iconRegistry.addSvgIcon('email', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/email.svg'));
     iconRegistry.addSvgIcon('skype', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/skype.svg'));
+    iconRegistry.addSvgIcon('telegram', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/telegram.svg'));
   }
 
   ngOnInit(): void {

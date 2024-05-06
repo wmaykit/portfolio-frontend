@@ -29,6 +29,7 @@ import { LemInArticleComponent } from './pages/articles/lem-in-article/lem-in-ar
 import { FtPrintfArticleComponent } from './pages/articles/ft-printf-article/ft-printf-article.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { RatingComponent } from './pages/skills/components/rating/rating.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 
 
 
@@ -51,7 +52,8 @@ import { RatingComponent } from './pages/skills/components/rating/rating.compone
     LemInArticleComponent,
     FtPrintfArticleComponent,
     SkillsComponent,
-    RatingComponent
+    RatingComponent,
+    ContactsComponent
   ],
   exports: [
     NavBarComponent,
