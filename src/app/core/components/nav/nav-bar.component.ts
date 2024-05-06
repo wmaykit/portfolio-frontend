@@ -9,7 +9,7 @@ import { map, Observable } from 'rxjs';
 })
 export class NavBarComponent {
   @Output() toggle: EventEmitter<boolean | undefined> = new EventEmitter<boolean | undefined>()
-  RESUME_URL = 'https://docs.google.com/document/d/170n3NCUs-Y5CYd8ptyAXdL_FtDFw2vAyx1RZgV7iCB4/edit?usp=sharing';
+  RESUME_URL = 'https://drive.google.com/file/d/1iydcl4z1422HoMAnzwKonB5WGI6klWa5/view?usp=sharing';
   isSmall: Observable<boolean>;
 
   constructor(breakpointObserver: BreakpointObserver) {
