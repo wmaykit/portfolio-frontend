@@ -27,6 +27,8 @@ import { CorewarArticleComponent } from './pages/articles/corewar-article/corewa
 import { FillitArticleComponent } from './pages/articles/fillit-article/fillit-article.component';
 import { LemInArticleComponent } from './pages/articles/lem-in-article/lem-in-article.component';
 import { FtPrintfArticleComponent } from './pages/articles/ft-printf-article/ft-printf-article.component';
+import { SkillsComponent } from './pages/skills/skills.component';
+import { RatingComponent } from './pages/skills/components/rating/rating.component';
 
 
 
@@ -47,7 +49,9 @@ import { FtPrintfArticleComponent } from './pages/articles/ft-printf-article/ft-
     CorewarArticleComponent,
     FillitArticleComponent,
     LemInArticleComponent,
-    FtPrintfArticleComponent
+    FtPrintfArticleComponent,
+    SkillsComponent,
+    RatingComponent
   ],
   exports: [
     NavBarComponent,

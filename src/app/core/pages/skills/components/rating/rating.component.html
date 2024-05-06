@@ -1,0 +1,5 @@
+<div>
+    <mat-icon [color]="'accent'" *ngFor="let _ of [].constructor(maxRating); let i = index">
+        {{setIcon(i + 1)}}
+    </mat-icon>
+</div>

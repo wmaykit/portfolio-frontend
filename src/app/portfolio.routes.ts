@@ -20,6 +20,7 @@ import { FillitArticleComponent } from './core/pages/articles/fillit-article/fil
 import { LemInArticleComponent } from './core/pages/articles/lem-in-article/lem-in-article.component';
 import { FtPrintfArticleComponent } from './core/pages/articles/ft-printf-article/ft-printf-article.component';
 import { FanficArticleComponent } from './core/pages/articles/fanfic-article/fanfic-article.component';
+import { SkillsComponent } from './core/pages/skills/skills.component';
 
 const PROJECTS_PATH = 'projects';
 
@@ -28,6 +29,7 @@ export const routes: Routes = [
   { path: 'corewar', component: CorewarComponent },
   { path: 'corewar-code-editor', component: CorewarCodeEditorComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'skills', component: SkillsComponent },
   { path: PROJECTS_PATH, component: ProjectsComponent },
   { path: `${PROJECTS_PATH}/kabanyok-artyom_fun`, component: PortfolioArticleComponent },
   { path: `${PROJECTS_PATH}/fanfic`, component: FanficArticleComponent },
