@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable } from 'rxjs';
 
@@ -7,16 +7,13 @@ import { map, Observable } from 'rxjs';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
   @Output() toggle: EventEmitter<boolean | undefined> = new EventEmitter<boolean | undefined>()
-  RESUME_URL = 'https://docs.google.com/document/d/170n3NCUs-Y5CYd8ptyAXdL_FtDFw2vAyx1RZgV7iCB4/edit?usp=sharing';
+  RESUME_URL = 'https://drive.google.com/file/d/1iydcl4z1422HoMAnzwKonB5WGI6klWa5/view?usp=sharing';
   isSmall: Observable<boolean>;
 
   constructor(breakpointObserver: BreakpointObserver) {
-    this.isSmall = breakpointObserver.observe(Breakpoints.Small).pipe(map((state) => !state.matches))
+    this.isSmall = breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).pipe(map((state) => !state.matches))
     this.isSmall.subscribe((isSmall) => isSmall && this.toggle.emit(false))
-  }
-
-  ngOnInit(): void {
   }
 }

@@ -2,9 +2,7 @@
     <div class="container">
         <ng-container *ngIf="isSmall | async; else menuButtonsToggle">
             <div class="logo">
-                <a routerLink="">
-                    Artyom Kabanyok
-                </a>
+                <a routerLink="">Artyom Kabanyok</a>
             </div>
             <div class="buttons">
                 <button mat-button routerLink="/about">About</button>
@@ -12,16 +10,18 @@
                 <button mat-button routerLink="/skills">Skills</button>
                 <button mat-button routerLink="/education">Education</button>
                 <button mat-button routerLink="/contacts">Contacts</button>
-                <a mat-button href="{{RESUME_URL}}">Resume<mat-icon svgIcon="external"></mat-icon>
-                </a>
+                <a mat-button href="{{RESUME_URL}}">Resume<mat-icon class="buttons-icon" svgIcon="external"></mat-icon></a>
             </div>
+            <div class="last-block"></div>
         </ng-container>
-        <div class="last-block"></div>
     </div>
 </mat-toolbar>
 
 <ng-template #menuButtonsToggle>
     <button mat-icon-button (click)="toggle.emit(undefined)">
         <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="">
+        <mat-icon>home</mat-icon>
     </button>
 </ng-template>

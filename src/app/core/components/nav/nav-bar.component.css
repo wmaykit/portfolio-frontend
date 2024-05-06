@@ -3,10 +3,6 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    
-    .mat-icon {
-        transform: scale(0.5);
-    }
 }
 mat-toolbar {
     display: flex;
@@ -25,6 +21,9 @@ mat-toolbar {
 .buttons {
     button {
         margin: 5px;
+    }
+    .buttons-icon {
+        transform: scale(0.5);
     }
 }
 

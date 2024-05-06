@@ -1,12 +1,18 @@
-<img class="photo" src="/assets/images/myfoto.jpg" alt="photo">
-<div class="about-text">
-    <p>
-        As a <strong>full-stack developer</strong>, I am passionate about leveraging my mastery of technology to create
-        innovative and efficient solutions. With expertise in <strong>Java</strong> and <strong>Angular</strong>, I have
-        a deep understanding of both back-end and front-end development. My ability to seamlessly integrate these
-        technologies allows me to build dynamic and responsive web applications that meet the needs of clients and users
-        alike. Whether it's designing robust APIs or crafting intuitive user interfaces, I thrive in the fast-paced
-        world of full-stack development. With a commitment to staying up-to-date with the latest industry trends, I am
-        constantly expanding my skill set to deliver cutting-edge solutions.
-    </p>
+<div class="container" [class.container-small]="isSmall | async">
+    <img class="photo" [class.photo-small]="isSmall | async" src="/assets/images/myfoto.jpg" alt="photo">
+    <div class="about-text" [class.about-text-small]="isSmall | async">
+        <p>
+            As a <strong>full-stack developer</strong>, I am passionate about leveraging my mastery of technology to
+            create
+            innovative and efficient solutions. With expertise in <strong>Java</strong> and <strong>Angular</strong>, I
+            have
+            a deep understanding of both back-end and front-end development. My ability to seamlessly integrate these
+            technologies allows me to build dynamic and responsive web applications that meet the needs of clients and
+            users
+            alike. Whether it's designing robust APIs or crafting intuitive user interfaces, I thrive in the fast-paced
+            world of full-stack development. With a commitment to staying up-to-date with the latest industry trends, I
+            am
+            constantly expanding my skill set to deliver cutting-edge solutions.
+        </p>
+    </div>
 </div>
