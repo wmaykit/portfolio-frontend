@@ -20,6 +20,9 @@
     a {
         margin: 10px;
     }
+    .buttons-icon {
+        transform: scale(0.5);
+    }
 }
 
 .content {
