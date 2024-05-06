@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="contact-container">
+        <a mat-fab color="accent" href="{{MyContactsEnum.telegramProfileUrl}}">
+            <mat-icon svgIcon="telegram"></mat-icon>
+        </a>
+        <a class="text-link" href="{{MyContactsEnum.telegramProfileUrl}}">@{{parseUserNameFromTelegramUrl(MyContactsEnum.telegramProfileUrl)}}</a>
+    </div>
+    <div class="contact-container">
+        <a mat-fab color="accent" href="{{MyContactsEnum.linkedinUrl}}">
+            <mat-icon svgIcon="linkedin"></mat-icon>
+        </a>
+        <a class="text-link" href="{{MyContactsEnum.linkedinUrl}}">{{trimProtocol(MyContactsEnum.linkedinUrl)}}</a>
+    </div>
+    <div class="contact-container">
+        <a mat-fab color="accent" href="mailto:{{MyContactsEnum.email}}">
+            <mat-icon svgIcon="email"></mat-icon>
+        </a>
+        <a class="text-link" href="mailto:{{MyContactsEnum.email}}">{{MyContactsEnum.email}}</a>
+    </div>
+    <div class="contact-container">
+        <a mat-fab color="accent"  href="{{MyContactsEnum.githubUrl}}">
+            <mat-icon svgIcon="github"></mat-icon>
+        </a>
+        <a class="text-link" href="{{MyContactsEnum.githubUrl}}">{{trimProtocol(MyContactsEnum.githubUrl)}}</a>
+    </div>
+    <div class="contact-container">
+        <a mat-fab color="accent"  href="{{MyContactsEnum.skypeShareLink}}">
+            <mat-icon svgIcon="skype"></mat-icon>
+        </a>
+        <a class="text-link" href="{{MyContactsEnum.skypeShareLink}}">{{ trimProtocol(MyContactsEnum.skypeShareLink) }}</a>
+    </div>
+</div>

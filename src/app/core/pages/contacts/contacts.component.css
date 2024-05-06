@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 100px 10px;
+}
+
+.text-link {
+    color: black;
+}
+
+.contact-container {
+    a {
+        margin: 7px;
+    }
+}
